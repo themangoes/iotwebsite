@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Student Dashboard | RFID Attendance System</title>
-        <link rel="stylesheet" href="styles.css">
-	    <script type="module" src="./student.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Attendance System - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type = "module" src="index.js"></script>
+</head>
 <body>
 
     <header>
         <div class="header-container">
             <img src="https://i.ibb.co/Hr5VjpT/iot-removebg-preview.png" alt="RFID Logo">
-            <h1>Student Dashboard</h1>
+            <h1>RFID Attendance System</h1>
         </div>
     </header>
 
-    <main id="teacher-section">
-        <div class="teacher-container">
-            <h2>Attendance Overview</h2>
+    <div id="login-section">
+        <div class="login-container">
+            <h2 id = "loginHeader">Login as Student</h2>
 
-            <table id = "studentTable">
-                <thead>
-                    <tr>
-                        <th>Subject</th>
-                        <th>Attendance</th>
-                        <th>Last Updated</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mathematics</td>
-                        <td>85%</td>
-                        <td>January 5, 2025</td>
-                    </tr>
-                    <tr>
-                        <td>Physics</td>
-                        <td>92%</td>
-                        <td>January 4, 2025</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="switch-container">
+                <!-- <label class="switch"> -->
+                    <button class = "pressed" id = "studentButton">Student</button>
+                    <button class = "unpressed" id = "teacherButton">Teacher</button>
+                <!-- </label> -->
+            </div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username"><p style="white-space: pre;margin: 0;">  ID</p></label>
+                    <input type="text" id="username" placeholder="Enter Student ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><p style="white-space: pre;margin: 0;">  Password</p></label>
+                    <input type="password" id="passwordField" placeholder="Enter your password" required>
+                    <input type="checkbox" id="seePassword" style="width: auto;margin-top: 10px;"><label> Show password</label>
+                </div>
+                <button class = "unpressed" type="submit">Login</button>
+                <label style="text-align: center;" id="invalidId"></label>
+            </form>
         </div>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2025 Bangalore Institute of Technology</p>
+            <p><img src="https://i.ibb.co/DKSM9Bg/bit-logo.jpg" alt="Bangalore Institute of Technology" style="width: 100px; margin-top: 10px;">
+                <br>&copy; 2025 Bangalore Institute of Technology<br><br><br>RFID Attendance System IOT Project<br><br>
+            By: Vignesh B S, Rohit Maiya M, Supreet Bhat, Srujan N Hiremath, Vynik P Jain<br>
+            
+            </p>
+        
     </footer>
 
 </body>

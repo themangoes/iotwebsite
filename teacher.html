@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Dashboard | RFID Attendance System</title>
     <link rel="stylesheet" href="styles.css">
+    <script type = "module" src="teacher.js"></script>
 </head>
 <body>
 
@@ -17,17 +18,38 @@
 
     <main id="teacher-section">
         <div class="teacher-container">
-            <h2>Select a Class</h2>
+            <h1 style="text-align: center; color: rgb(94, 73, 255);" id = "greeting"></h1><br>
+            <h2>Class Details</h2>
+            <table id = "classDetailsTable">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Attendees Count</th>
+                    </tr>
+                </thead>
 
+                <tbody>
+
+                </tbody>
+            </table><br>
+            <h2>Attendance Details</h2>
+            <center><h3>Select a Class</h3></center>
+            
             <div class="class-selection">
                 <select id="class-select">
-                    <option value="class1">Class 1</option>
+                    <!-- <option value="class1">Class 1</option>
                     <option value="class2">Class 2</option>
-                    <option value="class3">Class 3</option>
+                    <option value="class3">Class 3</option> -->
                 </select>
             </div>
-
-            <table>
+            <center>
+                <label id = "classDetails" style="text-align: center;"></label><br><br>
+                <label id = "attendanceDetails" style="text-align: center;"></label>
+            </center>
+            <table id = "attendanceDetailsTable">
                 <thead>
                     <tr>
                         <th>Student Name</th>
@@ -35,7 +57,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- <tr>
                         <td>Vignesh B S</td>
                         <td><button>Mark Present</button></td>
                     </tr>
@@ -46,7 +68,7 @@
                     <tr>
                         <td>Srujan N Hiremath</td>
                         <td><button>Mark Present</button></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>

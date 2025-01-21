@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Student Dashboard | RFID Attendance System</title>
         <link rel="stylesheet" href="styles.css">
-	<script src="student.js"></script>
+	    <script type="module" src="./student.js"></script>
     </head>
 <body>
 
@@ -17,19 +17,32 @@
     </header>
 
     <main id="teacher-section">
+        
         <div class="teacher-container">
+            <h1 style="text-align: center; color: rgb(94, 73, 255);" id = "greeting"></h1><br>
             <h2>Attendance Overview</h2>
-
+            <table id = "attendancePercentage">
+                <thead>
+                    <tr>
+                        <th style = "text-align:center">Teacher</th>
+                        <th style = "text-align:center">Attendance %</th>
+                    </tr>
+                </thead>
+            </table>
+            <br>
+            <h2>Details</h2>
             <table id = "studentTable">
                 <thead>
                     <tr>
-                        <th>Subject</th>
-                        <th>Attendance</th>
-                        <th>Last Updated</th>
+                        <th>Teacher</th>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- <tr>
                         <td>Mathematics</td>
                         <td>85%</td>
                         <td>January 5, 2025</td>
@@ -38,7 +51,7 @@
                         <td>Physics</td>
                         <td>92%</td>
                         <td>January 4, 2025</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>

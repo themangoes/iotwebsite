@@ -25,10 +25,10 @@ header {
     gap: 1em;
 }
 
-header h1 {
+header h1, h2 {
     font-size: 1.6em;
     font-weight: bold;
-    margin: 0;
+    /* margin-top: 2em; */
     color: rgb(255, 255, 255);
 }
 
@@ -71,7 +71,7 @@ header img {
     margin-bottom: 1.5em;
 }
 
-.switch {
+/* .switch {
     position: relative;
     display: inline-block;
     width: 50px;
@@ -114,13 +114,13 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(26px);
-}
+} 
 
 #user-type-label {
     font-weight: bold;
     font-size: 1.1em;
     color: #333;
-}
+} */
 
 /* Form */
 form {
@@ -142,8 +142,9 @@ form input {
     border: 1px solid #ced4da;
     border-radius: 6px;
     font-size: 1em;
-    width: 100%;
+    width: 90%;
     background: #f9f9f9;
+    margin-left: 1.5%;
 }
 
 form input:focus {
@@ -165,10 +166,31 @@ button {
     transition: background 0.3s, transform 0.2s;
 }
 
-button:hover {
+button.pressed {
+    padding: 0.8em 1em;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: transparent;
+    background-clip : text;
+    border-style: dashed;
+    border-color: #6a11cb;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button.unpressed:hover {
     background: linear-gradient(to right, #2575fc, #6a11cb);
     transform: scale(1.05);
 }
+
+button.pressed:hover{
+    
+}
+
+
 
 /* Footer */
 footer {
@@ -222,6 +244,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 table th, table td {
@@ -247,6 +270,11 @@ table td button {
 
 table td button:hover {
     background: #6a11cb;
+}
+
+#attendancePercentage {
+    width: 50%;
+    margin: auto;
 }
 
 
