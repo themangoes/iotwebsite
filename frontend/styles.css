@@ -289,3 +289,22 @@ table td button:hover {
         transform: translateY(0);
     }
 }
+
+
+/* ---------------------------------- */
+
+button.absent{
+    background: red;
+}
+
+button.absent:hover{
+    background: darkred
+}
+
+button.present{
+    background: green;
+}
+
+button.present:hover{
+    background: darkgreen
+}
